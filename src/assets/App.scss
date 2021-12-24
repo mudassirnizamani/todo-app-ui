@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  width: 100%;
+  background: rgb(54, 217, 182);
+  background: linear-gradient(
+    90deg,
+    rgb(24, 69, 83) 0%,
+    rgb(32, 152, 126) 43%,
+    rgb(66, 83, 123) 100%
+  );
+
+  .task_container {
+    height: 90%;
+    border-radius: 15px;
+    padding: 1rem 0.7rem;
+    width: 600px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background-color: #fff;
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
