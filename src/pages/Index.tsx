@@ -1,18 +1,12 @@
 import { useSnackbar } from "notistack";
 import { useEffect } from "react";
-
-function TaskSection() {
+function Index() {
   const { enqueueSnackbar } = useSnackbar();
 
   useEffect(() => {
     enqueueSnackbar("The app is not Completed Yet", { variant: "info" });
   }, []);
-
-  return (
-    <>
-      <div className="task_container">Hello World</div>
-    </>
-  );
+  return <>Hello World</>;
 }
 
-export default TaskSection;
+export default Index;
