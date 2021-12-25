@@ -1,12 +1,31 @@
+import List from "../components/List";
 import { useSnackbar } from "notistack";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import axios from "../core/api/axios";
+import { ListsEndpoints } from "../core/api/endpoints";
+import { IList } from "../core/models/IList.interface";
+
 function Index() {
-  const { enqueueSnackbar } = useSnackbar();
+  const [lists, setLists] = useState<IList[]>([]);
 
   useEffect(() => {
-    enqueueSnackbar("The app is not Completed Yet", { variant: "info" });
+    const getLists = async () => {
+      await axios
+        .get<IList[]>(ListsEndpoints.GetLists)
+        .then((res) => setLists(res.data));
+    };
+    getLists();
+    return () => {
+      setLists([]);
+    };
   }, []);
-  return <>Hello World</>;
+  return (
+    <>
+      {lists?.map((list: IList) => {
+        return <List listData={list} />;
+      })}
+    </>
+  );
 }
 
 export default Index;

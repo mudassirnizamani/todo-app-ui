@@ -1,3 +1,9 @@
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .layout {
   display: flex;
   align-items: center;
@@ -17,6 +23,7 @@
   height: 90%;
   border-radius: 15px;
   padding: 1rem 0.7rem;
+  overflow-y: scroll;
   width: 600px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   background-color: #fff;
@@ -32,4 +39,140 @@
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
+}
+
+.form_box {
+  display: flex;
+  height: 100%;
+  padding: 1rem;
+}
+
+.list_wrapper {
+  width: 100%;
+  border-bottom: 1px solid #e9e9e9;
+  color: #686868;
+  margin: 5px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+
+  .top {
+    width: 100%;
+    max-height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    .title {
+      width: 60%;
+    }
+
+    .list_btns {
+      width: 40%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-evenly;
+
+      button {
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+          border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        padding: 4px;
+        border-radius: 5px;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 0.2rem;
+        padding: 0.25rem 0.5rem;
+      }
+    }
+  }
+
+  .todos {
+  }
+}
+
+.item_wrapper {
+  width: 100%;
+  border-bottom: 1px solid #e9e9e9;
+  color: #686868;
+  margin: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+
+  .top {
+    width: 100%;
+    max-height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    .title {
+      width: 60%;
+
+      p {
+        margin-top: 1rem;
+        max-width: 90%;
+      }
+    }
+
+    .list_btns {
+      width: 40%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-evenly;
+
+      button {
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+          border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        padding: 4px;
+        border-radius: 5px;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 0.2rem;
+        padding: 0.25rem 0.5rem;
+      }
+    }
+  }
+}
+
+.black_outlined {
+  color: #343a40;
+  border-color: #343a40 !important;
+
+  &:hover {
+    background-color: #343a40 !important;
+    color: #fff;
+  }
+}
+
+.green_outlined {
+  color: #13834b;
+  border-color: #13834b !important;
+
+  &:hover {
+    background-color: #13834b !important;
+    color: #fff;
+  }
+}
+
+.red_outlined {
+  color: #94271b;
+  border-color: #94271b !important;
+
+  &:hover {
+    background-color: #94271b !important;
+    color: #fff;
+  }
+}
+
+.blue_outlined {
+  color: #17a2b8;
+  border-color: #17a2b8 !important;
+
+  &:hover {
+    background-color: #17a2b8 !important;
+    color: #fff;
+  }
 }

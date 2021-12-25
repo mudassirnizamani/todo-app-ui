@@ -6,8 +6,8 @@ import Layout from "./core/layouts/Layout";
 
 // Importing Pages - Mudasir Nizamani
 const Index = lazy(() => import("./pages/Index"));
-const CreateList = lazy(() => import("./core/layouts/CreateList"));
-const CreateItem = lazy(() => import("./core/layouts/CreateItem"));
+const CreateList = lazy(() => import("./pages/CreateList"));
+const CreateItem = lazy(() => import("./pages/CreateItem"));
 
 // Importing Material Ui Components - Mudasir Nizamani
 import IconButton from "@mui/material/IconButton";
@@ -16,6 +16,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
+  // Creating a red for the toast to open and close - Mudasir Nizamani
   const toastRef = createRef<any>();
 
   const onClickDismiss = (key: any) => () => {
@@ -24,11 +25,13 @@ function App() {
 
   return (
     <div className="App">
+      {/* Just Using the React Router - Mudasir Nizamani */}
       <Routes>
         <Route
           path="/"
           element={
             <Suspense fallback={<h2>plz wait loading</h2>}>
+              {/* using the SnackbarProvider component from notistack so I can show notification in the App - Mudasir Nizamani */}
               <SnackbarProvider
                 anchorOrigin={{
                   vertical: "top",
