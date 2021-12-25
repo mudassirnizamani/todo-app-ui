@@ -8,6 +8,8 @@ import Layout from "./core/layouts/Layout";
 const Index = lazy(() => import("./pages/Index"));
 const CreateList = lazy(() => import("./pages/CreateList"));
 const CreateItem = lazy(() => import("./pages/CreateItem"));
+const UpdateList = lazy(() => import("./pages/UpdateList"));
+const UpdateItem = lazy(() => import("./pages/UpdateItem"));
 
 // Importing Material Ui Components - Mudasir Nizamani
 import IconButton from "@mui/material/IconButton";
@@ -59,6 +61,8 @@ function App() {
           <Route index element={<Index />} />
           <Route path="create/list" element={<CreateList />} />
           <Route path="create/item" element={<CreateItem />} />
+          <Route path="update/list/:list_id" element={<UpdateList />} />
+          <Route path="update/item/:item_id" element={<UpdateItem />} />
         </Route>
       </Routes>
     </div>

@@ -1,5 +1,5 @@
 export interface IList {
-  ID: number;
+  ID: string;
   CreatedAt: string;
   UpdatedAt: string;
   DeletedAt: string;
