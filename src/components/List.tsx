@@ -6,6 +6,7 @@ import axios from "../core/api/axios";
 import { ListsEndpoints } from "../core/api/endpoints";
 import Item from "./Item";
 import { useSnackbar } from "notistack";
+import "../assets/List.scss";
 
 // Importing Material Ui Component - Mudasir Nizamani
 import AddIcon from "@mui/icons-material/Add";
@@ -52,6 +53,7 @@ function List(props: props) {
         }
       });
   };
+
   const Archive = async () => {
     const model: IUpdateList = {
       archived: true,
@@ -66,6 +68,7 @@ function List(props: props) {
       }
     });
   };
+
   const UnArchive = async () => {
     const model: IUpdateList = {
       archived: false,

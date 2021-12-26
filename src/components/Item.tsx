@@ -8,6 +8,7 @@ import axios from "../core/api/axios";
 import { ItemsEndpoints } from "../core/api/endpoints";
 import { IUpdateItem } from "../core/models/IUpdateItem.interface";
 import { AxiosError } from "axios";
+import "../assets/Item.scss";
 
 interface props {
   itemData: IItem;
